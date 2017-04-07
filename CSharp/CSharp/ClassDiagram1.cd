@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CSharp.Program" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAhAAAAAEiAAAAEAAAABAAAAIAABAAAIAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.Car">
+    <Position X="2.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAEACAAABIgAAAAADAAAAAAAAAAgAAAEAAAAICAAAA=</HashCode>
+      <FileName>Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.MiniVan">
+    <Position X="5.5" Y="1.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="CSharp.MiniVan.PublicInnerClass" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MiniVan.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="CSharp.MiniVan.PrivateInnerClass" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MiniVan.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>MiniVan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

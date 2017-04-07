@@ -1,0 +1,110 @@
+ol{
+    /*The list-style-type property allows you to control the shape or style of a bullet point (also known as a marker).*/
+    list-style-type: lower-roman;
+}
+
+table{
+
+    /*The border-spacing property allows you to control the distance between adjacent cells. By default, browsers often leave a small gap between
+    each table cell, so if you want to increase or decrease this space then the border-spacing property allows you to control the gap.
+
+    You can specify two values if desired to specify separate numbers for horizontal and vertical spacing.*/
+    border-spacing: 0px 0px;    /*look for when border-collapse: collapse; is used; see comments below*/
+
+    /* When a border has been used on table cells, where two cells meet, the width of lines would be twice that of the outside edges.
+    It is possible to collapse adjacent borders to prevent this using the border-collapse property. Possible values are:
+    collapse - Borders are collapsed into a single border where possible. (border-spacing will be ignored and cells pushed together,
+               and empty-cells properties will be ignored.)
+    separate - Borders are detached from each other. (border-spacing and empty-cells will be obeyed.) */
+    border-collapse: separate;
+}
+
+th, td{
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+
+    padding: 2px 10px;
+
+    text-align: center;
+}
+
+th{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+tr:hover{
+    background-color: rgba(146, 187, 238, 0.28);
+}
+
+td{
+    /*
+    If you have empty cells in your table, then you can use the empty-cells property to specify whether or not their borders should be shown.
+
+    It can take one of three values:
+    show - This shows the borders of any empty cells.
+    hide - This hides the borders of any empty cells.
+    inherit - If you have one table nested inside another, the inherit value instructs the table cells to obey the rules of the containing table.
+     */
+
+    empty-cells: show;
+}
+
+#email_input{
+    background-image: url("Email.png");
+    background-repeat: no-repeat;
+}
+
+input:focus {
+    background-color: #ffffff;
+    border: 1px solid #b1e1e4;}
+
+input {
+
+    font-size: 120%; /*font-size sets the size of the text entered by the user.*/
+
+    color: #5a5854;
+    background-color: #f2f2f2;
+
+    /*border adds a border around the edge of the input box, and border-radius can be used to create rounded corners*/
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+
+    padding: 5px 5px 5px 30px;
+
+    background-repeat: no-repeat;
+    background-position: 8px 9px;
+    display: block;     /*render input field as a block element*/
+    margin-bottom: 10px;
+}
+
+button {
+    color: #770200;
+    background-color: #b9e4e3;
+    border-radius: 10px;
+
+    /*The cursor property allows you to control the type of mouse cursor that should be displayed to users.*/
+    cursor: pointer; }
+
+button:hover {
+    color: #333333;
+    background-color: #a0dbc4;
+}
+
+fieldset {
+    width: 500px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    background-color: #a0dbc4;
+}
+
+legend {
+    background-color: #efefef;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: left;
+    text-transform: uppercase; }

@@ -1,0 +1,86 @@
+/*Normal Flow
+
+In normal flow, each block-level element sits on top of the next one. Since this is the default way in which browsers treat
+HTML elements, you do not need a CSS property to indicate that elements should appear in normal flow, but the syntax would be:
+position: static;
+*/
+
+#static {
+    position: static;
+
+    width:75%;
+}
+
+/*Relative positioning
+
+Relative positioning moves an element in relation to where it would have been in normal flow. For example, you can move it 10 pixels lower
+than it would have been in normal flow or 20% to the right.
+
+You can indicate that an element should be relatively positioned using the position property with a value of relative.
+
+You then use the offset properties (top or bottom and left or right) to indicate how far to move the element from where it would
+have been in normal flow.
+
+To move the box up or down, you can use either the top or bottom properties.
+To move the box horizontally, you can use either the left or right properties.
+
+The values of the box offset properties are usually given in pixels, percentages or ems.
+ */
+#relative {
+    position: relative;
+    top: 10px;
+    left: 25%;
+
+    width:50%;
+ }
+
+/*absolute
+
+When the position property is given a value of absolute, the box is taken out of normal flow and no longer affects the position of
+other elements on the page. (They act like it is not there.)
+
+The box offset properties (top or bottom and left or right) specify where the element should appear in relation to its containing element.
+
+box with position of absolute moves along with page scrolling.
+ */
+
+#absolute {
+    position:absolute;
+
+    top: 0px;
+    left: auto;
+    right: 0px;
+
+    width: 25%;
+}
+
+/*fixed
+
+Fixed positioning is a type of absolute positioning that requires the position property to have a value of fixed.
+
+It positions the element in relation to the browser window. Therefore, when a user scrolls down the page, it stays in the exact
+same place. It is a good idea to try this example in your browser to see the effect.
+ */
+#fixed{
+    position: fixed;
+
+    top:0px;
+    right: 40%;
+
+    margin-top: 0px;
+    background-color: rgb(0, 231, 255);
+    color: #ee0b0b;
+    font-weight: bolder;
+    font-size: 1.2em;
+
+    z-index: -1;    /*deleting this line will no longer case 1st para to appear over it*/
+}
+
+/*z-index
+
+The position property specifies the type of positioning method used for an element (static, relative, fixed or absolute).
+The z-index property specifies the stack order of an element.
+An element with greater stack order is always in front of an element with a lower stack order.
+Note: z-index only works on positioned elements (position:absolute, position:relative, or position:fixed).
+Positive numbers are closer to the user, and negative numbers are farther away.
+ */

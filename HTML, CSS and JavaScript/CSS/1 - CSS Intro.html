@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!--Onenote : CSS-->
+
+<html lang="en">
+
+<head>
+	<title>CSS Intro</title>
+	
+	<!-- <link> element to indicate where the CSS fle is located 
+	
+	The <link> element can be used in an HTML document to tell the browser where to fnd the CSS fle used to style the page. It is an empty element 
+	(meaning it does not need a closing tag), and it lives inside the <head> element. It should use three attributes:
+	
+	href: This specifes the path to the CSS fle (which is often placed in a folder called css or styles).
+	type: This attribute specifes the type of document being linked to. The value should be text/css.
+	rel: This specifes the relationship between the HTML page and the fle it is linked to. The value should be stylesheet when linking to a CSS fle
+	
+	An HTML page can use more than one CSS style sheet. To do this it could have a <link> element for every CSS fle it uses. For example, some authors 
+	use one CSS fle to control the presentation (such as fonts and colors) and a second to control the layout.
+	-->
+	<link href="1 - CSS Intro.css" type="text/css" rel="stylesheet" />
+	
+	<!--
+	You can also include CSS rules within an HTML page by placing them inside a <style> element, which usually sits inside the <head> element of the page.
+	The <style> element should use the type attribute to indicate that the styles are specifed in CSS. The value should be text/ css.
+	-->
+	
+	<style type="text/css">
+		h4 {
+		color:orange; }
+	</style>
+	
+</head>
+
+<body>
+
+	<p>Demoing CSS :</p>
+	
+	<ul>
+		<li><h1>This text has been styled using CSS</h1></li>
+		<li><h2>This text has been styled using CSS</h2></li>
+		<li><h3>This text has been styled using CSS</h3></li>
+		<li><h4>This text has been styled using CSS</h4></li>
+	</ul>
+	
+	End of demo
+	
+	<!-- Onenote : CSS selectors and selection rules -->
+	
+	<p style="background-color : #3c3333; text-shadow: 10px -5px black;">style attributes inside a tag have the most specifitvity and win over all rules defined by CSS sheet</p> 
+	
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<!--Onenote : Overview to Visual Editors and their code views (under HTML)-->
+
+<!--This is a comment. Comments are not displayed in the browser-->
+<html>
+
+<head>
+	<title>Text structure and formatting</title>
+</head>
+
+<body>
+This is body
+
+<!--Headings
+HTML has six "levels" of headings:
+<h1> is used for main headings, <h2> is used for subheadings
+If there are further sections under the subheadings then the <h3> element is used, and so on...
+Each heading is shown on as a paragraph (i.e. on a new line with some space above and below it)-->
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<h3>This is heading 3</h3>
+<h4>This is heading 4</h4>
+<h5>This is heading 5</h5>
+<h6>This is heading 6</h6>
+
+<!--Paragraph-->
+<p>By default, a browser will show each paragraph on a new line with some space between it and any subsequent paragraphs</p>
+<p>A  paragraph consists of one or more sentences that form a self-contained unit of discourse. The start of a paragraph 
+is indicated by a new line</p>
+
+<!--Text Formatting-->
+<p>
+<b>This is how we make words appear in bold</b>. <i>This is how we make words appear in italics.</i>
+2<sup>-1</sup>. H<sub>2</sub>O. <!--think of up in sup as upper and ub in sub as below-->
+</p>
+
+<!--White space collapsing
+When the browser comes across two or more spaces next to each other, it only displays one space. Similarly if it comes 
+across a line break, it treats that as a single space too. This is known as white space collapsing.
+Each of the 3 lies below are shown in the same way.-->
+<p>The moon is drifting away from Earth.</p>
+<p>The moon 		is drifting away from Earth.</p>
+<p>The moon is drifting away from
+
+
+Earth.</p>
+
+<!--Line breaks and horizontal rules-->
+<p>The Earth<br />gets one hundred tons heavier every day<br />due to falling space dust.</p>
+
+<p>Venus is the only planet that rotates clockwise.</p>
+<hr />
+<p>Jupiter is bigger than all the other planets combined.</p>
+
+<!-- Preformatted Text
+
+A web browser interprets your HTML code as being one long line. Preformatted text <pre> is a way to include text in your web page and have it look 
+the way you want it to without using HTML tags. When using the <pre> tag, you don't have to put in <p></p> and <br /> tags to tell the browser where 
+to put line breaks because the browser displays the text exactly the way you have typed it. Preformatted text works great for poems, computer code and 
+other pieces of text that have multiple line breaks. 
+-->
+
+<pre>When writing 
+H
+T
+M
+L
+Remember, the key to 
+S
+ U
+  C
+   C
+    E
+     S
+      S
+is in <em>attention</em>
+to <strong>DETAIL</strong>!
+</pre>
+
+<!-- Special Characters
+
+ In order for special characters like @, &, <, >, and © to show up on your web page, you need to use a special set of codes called character codes, 
+ which you insert into your HTML code so that your browser will display as the corresponding symbols or characters you want.
+ 
+ Some special characters can be identified by a name (&copy; , for example, creates the copyright symbol), others are identified by a number (&#153;
+ is for the trademark symbol Â™). Notice that whether you use the word or the number to identify the special character, the HTML always starts with an 
+ ampersand (&) and ends with a semi-colon (;). 
+ 
+ List of such more characters : http://www.webmonkey.com/2010/02/special_characters/
+-->
+
+<p>
+My name is CAT&#153;
+</p>
+
+</body>
+
+</html>

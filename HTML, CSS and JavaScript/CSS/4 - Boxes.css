@@ -1,0 +1,149 @@
+p.first_para{
+    /*When you use percentages, the size of the box is relative to the size of the browser window or, if the box is encased within another box, it is
+     a percentage of the size of the containing box.*/
+
+    /*
+    Some page designs expand and shrink to fit the size of the user's screen. In such designs, the min-width property specifies the smallest size a box
+    can be displayed at when the browser window is narrow, and the max-width property indicates the maximum width a box can stretch to when the browser
+     window is wide.
+     */
+
+    /*min-width and max-width always override values of width outside the min and max*/
+    min-width:400px;       /*see what happens when the browser window is shrunk to less than 400 px ? Text will no longer shrink and go outside the window's visible area*/
+    max-width: 20%;
+
+    /*NOTE : Margin, padding and border are additive to width and height. Width and height only apply to content inside the box*/
+
+    /*
+    In the same way that you might want to limit the width of a box on a page, you may also want to limit the height of it. This is achieved using the
+    min-height and max-height properties.
+     */
+    max-height: 100px;
+
+    /*
+    If the box is not big enough to hold the content, and the content expands outside the box it can look very messy. To control what happens when there
+    is not enough space for the content of a box, you can use the overflow property.
+
+    The overflow property tells the browser what to do if the content contained within a box is larger than the box itself. It can have one of two values:
+
+    hidden - hide content which overflows
+    scroll - This property adds a scrollbar to the box so that users can scroll to see the missing content.
+     */
+    overflow: scroll;
+}
+
+p.second_para{
+
+    text-align: justify;
+
+    border-color: blue;
+    border-bottom-color: darkgreen;
+    border-color: blue orange green red; /*top, right, bottom, left*/
+
+    /*border width can be mentioned in following ways:*/
+    border-width: thick;
+    border-width: 2px;
+    border-width: 5px 4px 3px 2px;  /*top, right, bottom, left*/
+    border-bottom-width: 3px;
+
+    border-style: solid;
+    border-style: dashed;
+    border-bottom-style: double;
+
+    /*The border property allows you to specify the width, style and color of a border in one property (and the values should be coded
+    in that specific order). Note : no commas between 3 values*/
+    border: 2px solid darkblue;
+
+    width:600px;
+
+    /*padding does not count towards width of box, it is in extra of width. Thus, width of box = width (property mentioned above) + padding
+
+    If a percentage is used, the padding is a percentage of the browser window (or of the containing box if it is inside another box).*/
+    padding: 10px;
+    padding-bottom: 10px;
+    padding: 10px 10px 10px 10px;  /*top, right, bottom, left*/
+
+    /*If the width of a box is specified then the margin is added to the width of the box
+    Margin may also be expressed in %.*/
+    margin:30px;
+
+    margin: 20px 30px;  /*top and bottom margins should be 20 pixels and left and right margins should be 30 pixels*/
+    padding: 10px 10px;
+}
+
+/*NOTE: If one box sits on top of another, margins are collapsed , which means the larger of the two margins will be used and the smaller will
+be disregarded.
+vertical gap between p1 and p2 will be 40 px.*/
+/*Onenote : Vertical margin*/
+
+p.first_para{
+    margin: 40px;
+
+    /*
+    Make a box appear in center :
+
+    If you want to center a box on the page (or center it inside the element that it sits in), you can set the left-margin and right-margin to auto.
+    In order to center a box on the page, you need to set a width for the box (otherwise it will take up the full width of the page).
+    Once you have specified the width of the box, setting the left and right margins to auto will make the browser put an equal gap on each side of the box.
+     This centers the box on the page (or within the element that the box sits inside).
+     */
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li{
+    /*display property
+
+    The display property specifies the type of box used for an HTML element.
+
+    The display property allows you to turn an inline element into a block-level element or vice versa, and can also be used to hide an element
+    from the page.
+
+    The values this property can take are:
+
+    inline: This causes a block-level element to act like an inline element.
+    block : This causes an inline element to act like a block-level element.
+    inline-block : This causes a block-level element to flow like an inline element, while retaining other features of a block-level element.
+    none : This hides an element from the page. In this case, the element acts as though it is not on the page at all (although a user could
+    still see the content of the box if they used the view source option in their browser). No whitespace appears !
+     */
+
+    display: inline;
+    margin-right: 10px;
+}
+
+li.coming-soon{
+    display: none;
+}
+
+li.hide{
+
+    /*visibility property
+
+    The visibility property allows you to hide boxes from users but It leaves a space where the element would have been. This property can take two
+    values:
+        hidden - This hides the element.
+        visible - This shows the element.
+     */
+    visibility: hidden;
+}
+
+p.second_para{
+    /*Border Radius
+    CSS3 introduces the ability to create rounded corners on any box, using a property called border-radius. The value indicates the size
+    of the radius in pixels.
+
+    The -moz-border-radius and -webkit-border-radius properties are not in the CSS specification. However, they are used in some versions of Chrome,
+    Firefox, and Safari to offer early support for this style
+
+    Borders can also be made into elliptical shape ! Search google for more info
+     */
+
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+
+    border-radius: 10px;
+    border-bottom-left-radius: 30px;
+}
+

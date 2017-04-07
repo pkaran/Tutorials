@@ -1,0 +1,59 @@
+/*pseudo-element
+
+You specify the pseudo-element at the end of the selector, and then specify the declarations as you would normally for any other element.
+
+A CSS pseudo-element is used to style specified parts of an element.
+
+For example, it can be used to:
+    Style the first letter, or line, of an element
+    Insert content before, or after, the content of an element
+
+The double colon replaced the single-colon notation for pseudo-elements in CSS3. This was an attempt from W3C to distinguish between
+pseudo-classes and pseudo-elements. */
+p.para::first-letter{
+    font-weight: bold;
+    font-size:200%;
+}
+
+/*pseudo-class
+
+A pseudo-class is used to define a special state of an element.
+
+For example, it can be used to:
+
+Style an element when a user mouses over it
+Style visited and unvisited links differently
+Style an element when it gets focus
+
+**** IMP **** When pseudo-classes are used, they should appear in this order: :link, :visited, :hover, :focus, :active **** IMP ****
+ */
+
+/*This allows you to set styles for links that have not yet been visited.*/
+a:link{
+    color: blue;
+}
+
+/*This allows you to set styles for links that have been clicked on.*/
+a:visited{
+    color: #8b0008;
+ }
+
+a:hover{
+    background-color: rgba(238, 62, 128, 0.31);
+}
+
+/*This is applied when an element is being activated by a user; for example, when a button is being pressed or a link being clicked. Sometimes this is
+used to make a button or link feel more like it is being pressed by changing the style or position of the element slightly.*/
+a:active{
+    color: black;
+}
+
+/*
+This is applied when an element has focus. Any element that you can interact with, such as a link you can click on or any form control can have focus.
+Focus occurs when a browser discovers that you are ready to interact with an element on the page. For example, when your cursor is in a form input ready
+to accept typing, that element is said to have focus. It is also possible to use the tab key on your keyboard to move through the interactive items on a
+page.
+ */
+a:focus{
+    background-color: yellow;
+}

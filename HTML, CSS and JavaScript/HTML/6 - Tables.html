@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Tables</title>
+</head>
+
+<body>
+
+In HTML, table is written row by row.
+
+<!--Tables
+The <table> element is used to create a table. The contents of the table are written out row by row.
+
+You indicate the start of each row using the opening <tr> tag. (The tr stands for table row.) It is followed by one or more <td> elements 
+(one for each cell in that row). At the end of the row you use a closing </tr> tag.
+
+Each cell of a table is represented using a <td> element. (The td stands for table data.) At the end of each cell you use a closing </td> tag.
+
+Some browsers automatically draw lines around the table and/or the individual cells. You will learn how to control the borders of tables using CSS
+-->
+
+<table>
+
+	<tr>
+		<td>3</td>
+		<td>6</td>
+		<td>9</td>
+		<td>30</td>
+	</tr>
+	
+	<tr>
+		<td>12</td>
+		<td>325234234234</td>
+		<td>18</td>
+	</tr>
+	
+</table>
+
+<br />
+
+<!--Table Headers
+The <th> element is used just like the <td> element but its purpose is to represent the heading for either a column or a row. (The th stands for table heading.)
+
+Even if a cell has no content, you should still use a <td> or <th> element to represent the presence of an empty cell otherwise the table will not render 
+correctly. (The frst cell in the frst row of this example shows an empty cell.)
+
+You can use the scope attribute on the <th> element to indicate whether it is a heading for a column or a row. It can take the values: row to indicate a 
+heading for a row or col to indicate a heading for a column.
+
+Browsers usually display the content of a <th> element in bold and in the middle of the cell.
+-->
+
+<table>
+
+	<!--1st row-->
+	<tr>
+		<th></th>
+		<th scope="col">Saturday</th>
+		<th scope="col">Sunday</th>
+	</tr>
+	
+	<!--2nd row-->
+	<tr>
+		<th scope="row">Tickets Sold</th>
+		<td>300</td>
+		<td>900</td>
+	</tr>
+	
+	<!--3rd row-->
+	<tr>
+		<th scope="row">Total Sales</th>
+		<td>$900</td>
+		<td>$2700</td>
+	</tr>
+
+</table>
+
+<br/>
+
+<!--Table cells spanning multiple rows or columns
+The colspan and rowspan attributes are also used at the <td> or <th> level to change the amount of space cells occupy. 
+The colspan attribute specifies the amount of columns a cell should span and rowspan attribute specifies the amount of rows a cell should span. 
+Using the colspan and rowspan attributes allows you to have one cell span multiple columns or rows.
+-->
+<table>
+	<tr>
+		<th></th>
+		<th>9am</th>
+		<th>10am</th>
+		<th>11am</th>
+		<th>12am</th>
+	</tr>
+	<tr>
+		<th >Monday</th>
+		<td colspan="2" bgcolor="#00CCFF">Geography</td>
+		<td bgcolor="#00CCFF">Math</td>
+		<td bgcolor="#00CCFF">Art</td>
+	</tr>
+	<tr>
+		<th>Tuesday</th>
+		<td colspan="3" rowspan=2 bgcolor="#00CCFF">Gym</td>
+		<td bgcolor="#00CCFF">Home</td>
+	</tr>
+	
+	<tr>
+		<th>Wednesday</th>
+	</tr>
+</table>
+
+<br/>
+
+<!-- Long tables
+There are three elements that help distinguish between the main content of the table and the first and last rows (which can contain different content).
+
+<thead> The headings of the table should sit inside the <thead> element.
+
+<tbody> The body should sit inside the <tbody> element.
+
+<tfoot> The footer belongs inside the <tfoot> element.
+
+By default, browsers rarely treat the content of these elements any differently than other elements however designers often use CSS styles to
+change their appearance.
+
+Part of the reason for having separate <thead> and <tfoot> elements is so that, if you have a table that is taller than the screen (or, if printed, longer 
+than one page) then the browser can keep the header and footer visible whilst the contents of the table scroll. This is intended to make it easier for users
+to see which column the data is in (however this functionality is not implemented by default in any current browser)
+-->
+
+<!-- place a table inside a div to make the table scrollable-->
+<div style="height:300px;overflow:auto; width: 300px">
+
+<table>
+
+	<thead>
+		<tr>
+			<th>Date</th>
+			<th>Income</th>
+			<th>Expenditure</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<th>1st January</th>
+			<td>250</td>
+			<td>36</td>
+		</tr>
+		<tr>
+			<th>2nd January</th>
+			<td>285</td>
+			<td>48</td>
+		</tr>
+		<!-- additional rows as above -->
+		<tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr>
+		<tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr>
+		<tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr>
+		<tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr>
+		<tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr>
+		<tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr>
+		<tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr>
+		<tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr>
+		<tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr>
+		<tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr>
+		<tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr>
+		<tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr><tr>
+			<th>31st January</th>
+			<td>129</td>
+			<td>64</td>
+		</tr>
+	</tbody>
+	
+	<tfoot>
+		<tr>
+			<td></td>
+			<td>7824</td>
+			<td>1241</td>
+		</tr>
+	</tfoot>
+</table>
+
+</div>
+
+<!-- !!!!!!!!!!!!!! Old code : WidTh & spacing  !!!!!!!!!!!!!!
+Part of the reason for having separate <thead> and <tfoot> elements is so that, if you have a table that is taller than the screen (or, if printed, 
+longer than one page) then the browser can keep the header and footer visible whilst the contents of the table scroll. This is intended to make it easier 
+for users to see which column the data is in (however this functionality is not implemented by default in any current browser)
+-->
+<table width="400" cellpadding="10" cellspacing="5">
+	<tr>
+		<th width="150"></th>
+		<th>Withdrawn</th>
+		<th>Credit</th>
+		<th width="150">Balance</th>
+	</tr>
+	<tr>
+		<th>January</th>
+		<td>250.00</td>
+		<td>660.50</td>
+		<td>410.50</td>
+	</tr>
+	<tr>
+		<th>February</th>
+		<td>135.55</td>
+		<td>895.20</td>
+		<td>1170.15</td>
+	</tr>
+</table>
+
+<br/>
+
+<!--  !!!!!!!!!!!!!! Old code : border & background !!!!!!!!!!!!!!
+The border attribute was used on both the <table> and <td> elements to indicate the width of the border in pixels.
+
+The bgcolor attribute was used to indicate background colors of either the entire table or individual table cells. The value is usually 
+a hex code (which we discuss on pages 249-252).
+
+This example uses the HTML border and bgcolor attributes. No CSS attributes were utilized in this example.
+
+When building a new website you should use CSS to control the appearance of the table rather than these attributes. 
+They are only covered here because you may come across them if you look at the code of older websites.
+-->
+
+<table border="2" bgcolor="#efefef">
+	<tr>
+		<th width="150"></th>
+		<th>Withdrawn</th>
+		<th>Credit</th>
+		<th width="150" bgcolor="#cccccc">Balance</th>
+	</tr>
+	<tr>
+		<th>January</th>
+		<td>250.00</td>
+		<td>660.50</td>
+		<td bgcolor="#cccccc">410.50</td>
+	</tr>
+	<tr>
+		<th>February</th>
+		<td>135.55</td>
+		<td>895.20</td>
+		<td bgcolor="#cccccc">1170.15</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

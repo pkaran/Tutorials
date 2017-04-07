@@ -1,0 +1,10 @@
+/* this is a css comment */
+
+body {
+font-family: Arial, Verdana, sans-serif; background-color:gray; color:yellow }
+
+h1, h2 {
+color: #ee3e80; background-color: white}
+
+p {
+color: green;}

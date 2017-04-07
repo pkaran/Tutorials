@@ -1,0 +1,4 @@
+﻿  main.c
+h:\box sync\c\c\main.c(51): warning C4101: 'intVar': unreferenced local variable
+  C.vcxproj -> H:\Box Sync\C\x64\Debug\C.exe
+  C.vcxproj -> H:\Box Sync\C\x64\Debug\C.pdb (Full PDB)

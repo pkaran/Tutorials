@@ -1,0 +1,17 @@
+Strings
+files pg 282
+generators page 112
+sorting with a key pg 247
+Binary Byte File page pg 123
+try statement pg 334
+print operation pg 358
+Handling larger actions pg 374
+map() and enumerate()
+
+more about exec(), eval() : pg 335
+
+Technically speaking, sequence assignment actually supports any iterable object on the
+right, not just any sequence. This is a more general category that includes collections
+both physical (e.g., lists) and virtual (e.g., a file’s lines), which was defined briefly in       : line
+Chapter 4 and has popped up in passing ever since. We’ll firm up this term when we
+explore iterables in Chapter 14 and Chapter 20.

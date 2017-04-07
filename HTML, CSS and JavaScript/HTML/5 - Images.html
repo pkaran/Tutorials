@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Images</title>
+</head>
+
+<body>
+
+<!--Onenote : Images 
+
+img is an empty element (i.e. with no empty tags). Following are various attributes of an img element: 
+
+src = URL to image. URL can be relative or absolute
+
+alt = This provides a text description of the image which describes the image if you cannot see it.
+The text used in the alt attribute is often referred to as alt text. It should give an accurate description of the image content
+so it can be understood by screen reader software (used by people with visual impairments) and search engines.
+
+title = provide additional information about the image. Most browsers will display the content of this attribute in a tootip when the user hovers over
+        the image.
+
+height = This specifes the height of the image in pixels
+
+width = This specifes the width of the image in pixels.
+
+NOTE : aling is depracated with HTML5 ! use CSS to aling images instead !!
+aling = set alingment of image to left
+
+Images often take longer to load than the HTML code that makes up the rest of the page. It is, therefore, a good idea to specify the size of the image
+so that the browser can render the rest of the text on the page while leaving the right amount of space for the image that is still loading.
+The size of images is increasingly being specifed using CSS rather than HTML
+
+Images are not block elements i.e. they do not implicitly appear on a new line like <p> and <h1> do
+-->
+Hover the mouse over the picture to see title of picture ! <br />
+
+<!--figure and figcaptions
+
+Images often come with captions. HTML5 has introduced a new <figure> element to contain images and their caption so that the two are associated.
+You can have more than one image inside the <figure> element as long as they all share the same caption.
+
+The <figcaption> element has been added to HTML5 in order to allow web page authors to add a caption to an image. Before these elements were
+created there was no way to associate an <img> element with its caption. Older browsers that do not understand HTML5 elements simply ignore the new elements
+and display the content of them.
+-->
+
+<figure>
+
+<img src="Images/brooklyn-bridge-skyline.jpg" alt="Brooklyn Bridge and New York Skyline" title="From title: Brooklyn Bridge and New York Skyline" height="281" width="500"/>
+
+<figcaption>
+Brooklyn Bridge and New York Skyline
+</figcaption>
+
+</figure>
+
+<br/>
+
+<p>
+A moon is a satellite of earth. 
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" title="Moon from telescope" alt="moon" height=150 width=150/>
+It looks great at night ! The structure looks ugly ! Images are inline elements !!
+</p>
+
+<hr />
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" title="Moon from telescope" alt="moon" height=150 width=150/>
+<p>A moon is a satellite of earth. It looks great at night ! The structure looks great !</p>
+
+<hr />
+
+<!-- NOTE : new websites should use CSS to control the alignment of images. Align attribute(which lets set allingment of images) has been depracated in HTML5 !! -->
+
+<p>
+A moon is a satellite of earth. 
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" title="Moon from telescope" alt="moon" height=100 width=100 align="left"/>
+It looks great at night ! The Moon is an astronomical body that orbits planet Earth, being Earth's only permanent natural satellite. 
+It is the fifth-largest natural satellite in the Solar System, and the largest among planetary satellites relative to the size of the planet
+ that it orbits (its primary). Following Jupiter's satellite Io, the Moon is second-densest satellite among those whose densities are known.
+</p>
+
+<hr />
+
+<p>
+A moon is a satellite of earth. 
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" title="Moon from telescope" alt="moon" height=100 width=100 align="right"/>
+It looks great at night ! The Moon is an astronomical body that orbits planet Earth, being Earth's only permanent natural satellite. 
+It is the fifth-largest natural satellite in the Solar System, and the largest among planetary satellites relative to the size of the planet
+ that it orbits (its primary). Following Jupiter's satellite Io, the Moon is second-densest satellite among those whose densities are known.
+</p>
+
+</body>
+
+</html>

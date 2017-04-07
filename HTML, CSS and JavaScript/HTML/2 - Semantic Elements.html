@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+
+<!--Onenote : Sematic Markup-->
+
+<html>
+	
+<head>
+	<title>Semantic Elements</title>
+</head>
+
+<body>
+
+<!--- Strong
+The use of the <strong> element indicates that its content has strong importance. For example, the words contained in this element might
+be said with strong emphasis. By default, browsers will show the contents of a <strong> element in bold.-->
+<strong>Strong means strong emphasis</strong>
+
+<!--Emphasis
+The <em> element indicates emphasis that subtly changes the meaning of a sentence. By default browsers will show
+the contents of an <em> element in italic.-->
+<p>I <em>think</em> Ivy was the first.</p>
+<p>I think <em>Ivy</em> was the first.</p>
+<p>I think Ivy was the <em>first</em>.</p>
+
+<!--Quotations : <blockquote> and <q>
+Both elements may use the cite attribute to indicate where the quote is from. Its value should be a URL that will have more information about the source of
+the quotation.
+-->
+<blockquote cite="https://www.w3schools.com/html/html5_semantic_elements.asp">
+<p>
+The blockquote element is used for longer quotes that take up an entire paragraph. Browsers tend to indent the contents 
+of the blockquote element, however you should not use this element just to indent a piece of text - rather you should achieve this effect using CSS.
+</p>
+</blockquote>
+
+<p>The q element is used for <q>shorter quotes</q> that sit within a paragraph. Browsers are supposed to put quotes around the q element, however 
+Internet Explorer does not - therefore many people avoid using the q element.</p>
+
+<!--aBBreViaTions & acronyms-->
+<p>
+<abbr title="National Auronatics and Space Administration">NASA<abbr> is great. Keep pointer over NASA to see its full form (will be shown in a tooltip). 
+<abbr title="professor">Proff<abbr>
+</p>
+
+<!--cite
+Browsers will render the content of a <cite> element in italics.-->
+<p><cite>A Brief History of Time</cite> by Stephen Hawking has sold over ten million copies worldwide.</p>
+
+<!--Changes to cotent <ins> <del> and <s>
+The <ins> element can be used to show content that has been inserted into a document, while the <del> element can show text that has been deleted from it.
+The content of a <ins> element is usually underlined, while the content of a <del> element usually has a line through it.
+The <s> element indicates something that is no longer accurate or relevant (but that should not be deleted). Visually the content of an <s> element will 
+usually be displayed with a line through the center.
+-->
+<p>It was the <del>worst</del> <ins>best</ins> idea she had ever had.</p>
+<p>Laptop computer:<br />
+<s>Was $995</s>
+<br />Now only $375</p>
+
+<!--address contain contact details for the author of the page Browsers will render the content of a <cite> element in italics.-->
+<hr />
+<address>
+<p><a href="mailto:homer@example.org">homer@example.org</a>
+<br />742 Evergreen Terrace, Springfield.</p>
+</address>
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+/*color can be specified in 3 ways :
+
+hex value : These are six-digit codes that represent the amount of red, green and blue in a color, preceded by a pound or hash #
+color name : There are 147 predefined color names that are recognized by browsers.
+rgb : Values for red, green, and blue are expressed as numbers between 0 and 255.
+
+hsl value : colors can also be expressed as hsl(a) (hue, saturation, and lightness values. [alpha is optional])
+            Discussion about it skipped here as above 3 methods are sufficient
+*/
+
+body {
+
+    /*Background color
+   CSS treats each HTML element as if it appears in a box, and the background-color property sets the color of the background for that box.
+   If you do not specify a background color, then the background is transparent.
+
+   By default, most browser windows have a white background, but browser users can set a background color for their windows, so if you want to be sure
+   that the background is white you can use the background-color property on the <body> element.
+    */
+    background-color: #ee3e80;         /*hex value*/
+    background-color: rgb(23,245,45);  /*rgb*/
+    background-color: aqua;            /*color name*/
+
+    /*Font Family
+    The font-family property allows you to specify the typeface that should be used for any text inside the element(s) to which a CSS rule applies.
+
+    The people who are visiting your site need the typeface you have specified installed on their computer in order for it to be displayed.
+    You can specify a list of fonts separated by commas so that, if the user does not have your first choice of typeface installed, the browser can try to
+    use an alternative font from the list.
+
+    It is also common to end with a generic font name for that type of font (serif, sans-serif, monospace, cursive, fantasy)
+
+    If a font name is made up of more than one word, it should be put in double quotes. Designers suggest pages usually look better if they use no more
+    than three typefaces on a page.
+     */
+
+    font-family: "Courier New", Courier, monospace, "My Font";
+
+    /*font size
+    The font-size property enables you to specify a size for the font. There are several ways to specify the size of a font. The most common are:
+
+    pixels - Pixels are commonly used because they allow web designers very precise control over how much space their text takes up.
+    The number of pixels is followed by the letters px.
+
+    percentages - The default size of text in browsers is 16px. So a size of 75% would be the equivalent of 12px, and 200% would be 32px.
+    If you create a rule to make all text inside the <body> element to be 75% of the default size (to make it 12px), and then specify another rule
+    that indicates the content of an element inside the <body> element should be 75% size, it will be 9px (75% of the 12px font size).
+
+    ems - Relative to the font-size of the element (2em means 2 times the size of the current font)
+     */
+
+    font-size : 12px;
+    font-size: 200%;
+    font-size: 1.3em;
+}
+
+/*@font-face
+    @font-face allows you to use a font, even if it is not installed on the computer of the person browsing, by allowing you to specify a path to a
+    copy of the font, which will be downloaded if it is not on the user's machine.
+
+    Because this technique allows a version of the font to be downloaded to the user's computer, it is important that the license for the font permits
+    it to be used in this way.
+
+    various attributes:
+
+    font-family: This specifies the name of the font. This name can then be used as a value of the font-family property in the rest of the style sheet
+
+    src: This specifies the path to the font. In order for this technique to work in all browsers, you will probably need to specify paths to a few
+    different versions of the font
+
+    format: This specifies the format that the font is supplied in. (It's discussed in detail on the next page.)
+
+    fonts might have to made available in different formats so that they can be supported by multiple browsers. Fonts can also be downloaded into
+    user computer from online source. Check out book to see more info.
+     */
+
+@font-face {
+    font-family: "My Font";     /*Now, My Font can be used with font-family property elsewhere*/
+    src: url("font/AguafinaScript-Regular.ttf") format('TrueType');
+}
+
+h1{
+    font-family:"My Font";
+
+    color: rgb(255, 0, 0); /*color of text*/
+
+    /*opacity
+    CSS3 introduces the opacity property which allows you to specify the opacity of an element and any of its child elements. The value is a number
+    between 0.0 and 1.0 (so a value of 0.5 is 50% opacity and 0.15 is 15% opacity). Opacity of 0 will make color fully transparent (color goes away at 0)
+
+    The CSS3 rgba property allows you to specify a color, just like you would with an RGB value, but adds a fourth value to indicate opacity. This
+     value is known as an alpha value and is a number between 0.0 and 1.0 (so a value of 0.5 is 50% opacity and 0.15 is 15% opacity).
+     The rgba value will only affect the element on which it is applied (not child elements).
+     */
+
+    background-color: rgba(255, 255, 255, 1);     /*the last one (alpha) is opacity, opacity of all elements inside h1 will get affected*/
+    opacity:0.45;   /*this one will affect opacity of child elements as well*/
+
+
+    /*font-weight
+
+    The font-weight property allows you to create bold text. There are two values that this property commonly takes:
+
+    normal - This causes text to appear at a normal weight.
+    bold - This causes text to appear bold.
+
+    You might wonder why there is a normal weight. This is because if, for example, you created a rule for the <body> element indicating that all text
+    inside the body should appear bold, you might need an option that allows the text in certain instances to appear normal weight. So it is essentially
+    used as an "off switch."
+     */
+    font-weight: normal;    /*font-weight for headings are normally set to bold, we are setting it to normal to make it appear not bold*/
+}
+
+h2{
+    font-family:"My Font";
+
+    color: rgb(255, 0, 0); /*color of text*/
+
+    /*
+    backward compatibility
+
+    Because some browsers will not recognize RGBA colors, you can offer a fallback so that they display a solid color. If there are two rules that
+    apply to the same element, the latter of the two will take priority. To create the fallback, you can specify a color as a hex code, color name
+    or RGB value, followed by the rule that specifies an RGBA value. If the browser understands RGBA colors it will use that rule. If it doesn't, it
+    will use the RGB value.
+     */
+
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+.indented-para{
+    
+    /*text-indent
+    The text-indent property allows you to indent the first line of text within an element. The amount you want the line indented by can be specified
+    in a number of ways but is usually given in pixels or ems.
+
+    Note: Negative values are allowed. The first line will be indented to the left if the value is negative.
+     */
+
+    text-indent: 5%;
+}

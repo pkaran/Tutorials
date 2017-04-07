@@ -1,0 +1,8 @@
+Sequences allow you to store multiple values in an organized and efficient fashion.
+There are three kinds of sequences in Python: strings, lists and tuples. Dictionaries and sets are containers for sequential data.
+
+iteration protocol in Python : Any object with
+a __next__ method to advance to a next result, which raises StopIteration at the end
+of the series of results, is considered an iterator in Python. Any such object may also
+be stepped through with a for loop or other iteration tool, because all iteration tools
+normally work internally by calling __next__ on each iteration and catching the StopIteration exception to determine when to exit.

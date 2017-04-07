@@ -1,0 +1,12 @@
+C:\Users\pkara\OneDrive\CSharp\CSharp\bin\Debug\CSharp.exe.config
+C:\Users\pkara\OneDrive\CSharp\CSharp\bin\Debug\CSharp.exe
+C:\Users\pkara\OneDrive\CSharp\CSharp\bin\Debug\CSharp.pdb
+C:\Users\pkara\OneDrive\CSharp\CSharp\obj\Debug\CSharp.exe
+C:\Users\pkara\OneDrive\CSharp\CSharp\obj\Debug\CSharp.pdb
+C:\Users\pkara\OneDrive\CSharp\CSharp\obj\Debug\CSharp.csprojResolveAssemblyReference.cache
+C:\Users\pkara\OneDrive\D.K.E.R Programming\CSharp\CSharp\bin\Debug\CSharp.exe.config
+C:\Users\pkara\OneDrive\D.K.E.R Programming\CSharp\CSharp\obj\Debug\CSharp.exe
+C:\Users\pkara\OneDrive\D.K.E.R Programming\CSharp\CSharp\obj\Debug\CSharp.pdb
+C:\Users\pkara\OneDrive\D.K.E.R Programming\CSharp\CSharp\obj\Debug\CSharp.csprojResolveAssemblyReference.cache
+C:\Users\pkara\OneDrive\D.K.E.R Programming\CSharp\CSharp\bin\Debug\CSharp.exe
+C:\Users\pkara\OneDrive\D.K.E.R Programming\CSharp\CSharp\bin\Debug\CSharp.pdb

@@ -1,0 +1,14 @@
+﻿  struct_demo.c
+  mian2.c
+h:\box sync\c\c\mian2.c(33): warning C4013: 'printf' undefined; assuming extern returning int
+h:\box sync\c\c\mian2.c(54): warning C4101: 'test': unreferenced local variable
+h:\box sync\c\c\mian2.c(108): warning C4101: 'pArray': unreferenced local variable
+  main.c
+h:\box sync\c\c\main.c(254): warning C4013: 'test' undefined; assuming extern returning int
+h:\box sync\c\c\main.c(239): warning C4101: 'd': unreferenced local variable
+h:\box sync\c\c\main.c(298): warning C4101: 'test': unreferenced local variable
+h:\box sync\c\c\main.c(310): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+h:\box sync\c\c\main.c(307): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+  C.vcxproj -> H:\Box Sync\C\Debug\C.exe
+  C.vcxproj -> H:\Box Sync\C\Debug\C.pdb (Full PDB)

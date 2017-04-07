@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!--Onenote : links 
+
+You will commonly come across the following types of links:
+● Links from one website to another
+● Links from one page to another on the same website
+● Links from one part of a web page to another part of the same page
+● Links that open in a new browser window
+● Links that start up your email program and address a new email to someone
+-->
+
+<html>
+
+<head>
+	<title>Links</title>
+</head>
+
+<body>
+
+<!--link text is written between tags. The value of the href attribute is the page that you want people to go to when they click on the link.
+When you link to a different website, the value of the href attribute will be the full web address for the site, which is known as an absolute URL.
+ignore id attribute for now-->
+<a href="https://www.google.com/" id="top">Google (opens in same tab)</a>
+
+<!--When you are linking to other pages within the same site, you do not need to specify the domain name in the URL. You can use a shorthand known as a relative URL
+
+If all the pages of the site are in the same folder, then the value of the href attribute is just the name of the fle.
+
+If you have different pages of a site in different folders, then you can use a slightly more complex syntax to indicate where the page is in relation to 
+the current page. 
+-->
+<h1>Using relative URLs</h1>
+<p>
+<a href="1 - Text structure and formatting.html">Text structure and formatting</a>
+<br />
+<a href="2 - Semantic Elements.html">Semantic Elements</a>
+<br />
+<a href="3 - Lists.html">Lists</a>
+</p>
+
+<!--To create a link that starts up the user's email program and addresses an email to a specifed email address, you use the <a> element. 
+However, this time the value of the href attribute starts with mailto: and is followed by the email address you want the email to be sent to.
+
+an email link looks just like any other link but, when it is clicked on, the user's email program will open a new email message and address it to the person
+specifed in the link.
+-->
+<p>
+<a href="mailto:test@html.org">Contact HTML.org</a>
+</p>
+
+<p>
+<a href="https://www.google.com/" target="_blank">Google (opens in new tab)</a>
+</p>
+
+<a href="#top">Go to top of page</a>
+
+</body>
+
+</html>

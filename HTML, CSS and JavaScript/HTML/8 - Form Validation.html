@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<!--comment-->
+
+<html lang="en">
+
+<head>
+	<title>Form Validation</title>
+</head>
+
+<body>
+	
+	<!--
+	Traditionally, form validation has been performed using JavaScript (which is beyond the scope of this book). But HTML5 is introducing validation 
+	and leaving the work to the browser. 
+	
+	Validation helps ensure the user enters information in a form that the server will be able to understand when the form is submitted. Validating the 
+	contents of the form before it is sent to the server the helps:
+	
+	● Reduce the amount of work the server has to do
+	● Enables users to see if there are problems with the form faster than if validation were performed on the server.
+	
+	At the time of writing, only Chrome and Opera supported HTML5 validation, although other browsers are expected to follow. In order to support older 
+	browsers (that do not understand HTML5), web page authors are likely to continue using JavaScript to validate forms.
+	
+	required is an example of form validation. This HTML5 attribute does not need a value, but in HTML 4 all attributes must have a value. 
+	So, some people give this attribute a value of required
+	-->
+	
+	<form action="data.txt">
+
+		<label>Username : <input type="text" name="username" required/></Label>
+		
+		<br /><br />
+		
+		<label>Password : <input type="password" name="password" required/></Label>
+		
+		<br /><br />
+		
+		<input type="submit" name="loginButton" value="Login" />
+	
+	</form>
+	
+	<!-- Onenote : other stuff -->
+	
+</body>
+
+</html>
