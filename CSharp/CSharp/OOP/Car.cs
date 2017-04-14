@@ -37,10 +37,10 @@ namespace CSharp
         private String make;
 
         // const variables must be initialized when decleared ! They cannot be initialized in a constructor !!
-        public const double PI = 3.14;  
-      
+        public const double PI = 3.14;
 
-        /*TOPIC : Read only property
+
+        /*TOPIC : Read only field
          * 
         Closely related to constant data is the notion of read-only field data (which should not be confused with
         a read-only property). Like a constant, a read-only field cannot be changed after the initial assignment.
@@ -97,7 +97,7 @@ namespace CSharp
             ReadOnlyPI = 3.14;
 
             this.year = year;
-            make = this.make;
+            this.make = make;
 
             //objectDescription is a static field whose value is reset each time you create a new object !
             objectDescription = "This object is a Car";
@@ -115,7 +115,7 @@ namespace CSharp
         class exposes all functionality as class-level (aka static) members
         
          the static keyword can be applied to the following:
-            •	 Data of a class
+            •	 Data/field of a class
             •	 Methods of a class
             •	 Properties of a class
             •	 A constructor

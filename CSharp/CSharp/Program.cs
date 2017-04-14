@@ -3,6 +3,7 @@
 using System;
 using System.Text;
 using CSharp.Interface;
+using CSharp.Interface.Common_Interfaces_Implementation;
 
 namespace CSharp
 {
@@ -17,6 +18,7 @@ namespace CSharp
         located on the Application tab of the Visual Studio project properties editor 
 
         Main must be declared as static and it must return void or int, and it must have either no parameters or else one parameter of type string[].        
+        
         No need of an explicit return statement when method has void return type. If no access modifier is used, private is assumed
         
          Onenote : Specifying an Application Error Code in C#*/
@@ -25,9 +27,12 @@ namespace CSharp
             //use Environment.GetCommandLineArgs() to get command line args passed, args passed on to Main can be used as well
             Console.WriteLine("Number of command line args = {0}", Environment.GetCommandLineArgs().Length);
 
-            basics();
-            OOP();
-            ExceptionHandling.exceptionHandlingMain();
+            //basics();
+            //OOP();
+            //ExceptionHandling.exceptionHandlingMain();
+            //iterfaceImplementationDemo();
+
+            Collections.nonGenericCollectionsDemo();
 
             Console.Write("\nType anythng and press enter to exit : ");
             System.Console.ReadLine();      //fully qualified name
@@ -71,8 +76,8 @@ namespace CSharp
             public fields in a few lines of code.
             
              NOTE : Static data cannot be initialized with the syntax below*/
-            Car car1 = new Car { MaxCapacity = 10 };    // the default constructor is called implicitly
-            Car car2 = new Car() { MaxCapacity = 5, NumberOfWheels = 4 };   // the default constructor is called explicitly
+            Car car1 = new Car { MaxCapacity = 10 };    // the parameterless constructor is called implicitly
+            Car car2 = new Car() { MaxCapacity = 5, NumberOfWheels = 4 };   // the parameterless constructor is called explicitly
             Car car3 = new Car("Honda") { MaxCapacity = 8 };    // a custom constructor is called
 
             // Onenote : partial classes
@@ -92,16 +97,18 @@ namespace CSharp
 
             // use the is and as keyword to determine if a (objetc of) class implements an interface
             // below, we check if a Triangle class object implements Point
-            CSharp.Interface.Point p = t as CSharp.Interface.Point;
+            CSharp.Interface.IPoint p = t as CSharp.Interface.IPoint;
             if(p != null)
             {
                 p.NumOfPoints = 3;      
             }
 
-            if(t is CSharp.Interface.Point)      
+            if(t is CSharp.Interface.IPoint)      
             {
                 Console.WriteLine("Now safe to cast Triangle objects to Point type");
             }
+
+            IPoint pp = t as IPoint;
 
             //Onenote : System.Object
 
@@ -109,6 +116,13 @@ namespace CSharp
             String c1 = "hey there !";
        
             Console.WriteLine("{0} , {1}", c.GetHashCode(), c1.GetHashCode()) ;
+        }
+
+        static void iterfaceImplementationDemo()
+        {
+            //Enumerable.demo();
+            //Cloneable.demo();
+            //Comparable.demo();
         }
 
         static void formattingOutput()
@@ -281,8 +295,7 @@ namespace CSharp
             */
 
             //*** Imp assumption : Assuming /checked (program wide overflow checking described above enabled in settings) is enabled,
-            // this block will not trigger
-            // a runtime exception.
+            // this block will not trigger a runtime exception.
             unchecked
             {
                 byte sum = (byte)(b1 + b2);
@@ -350,7 +363,7 @@ namespace CSharp
             foreach (String s in data)
                 Console.WriteLine(s);
 
-            //switch and goto : cases in C# need break or goto !
+            //switch and goto : cases in C# need to end with break or goto !
             //C# demands that each case (including default) that contains executable statements have a
             //terminating break or goto to avoid fall-through
             int caseSwitch = 2;
@@ -365,7 +378,7 @@ namespace CSharp
                     goto default;       // ***** goto statement
                 default:
                     Console.WriteLine("Default case");
-                    break;
+                    break;          // even the default case need to end with break or goto
             }
 
             //while loop
@@ -394,7 +407,7 @@ namespace CSharp
 
             //ways to initilaize an array
 
-            //specifying new kewyord is optional
+            //specifying new kewyord is optional, use this one as it involves less typing !
             bool[] boolArray = { false, false, true };
             Console.WriteLine("\nboolArray has {0} elements", boolArray.Length);
 
@@ -424,6 +437,10 @@ namespace CSharp
             // Error! Mixed types!
             //var d = new[] { 1, "one", 2, "two", false };
 
+            // explicitly specifying the type, which kinda defeats the purpose of using an implicitly typed variable
+            var d = new Object[] { 1, 12.21, "test" };
+            Console.WriteLine("d is a: {0}", d.ToString());
+
             /*
             C# also supports two varieties of multidimensional arrays. 
 
@@ -452,7 +469,7 @@ namespace CSharp
             Length                          This property returns the number of items within the array.
             Rank                            This property returns the number of dimensions of the current array.
             Reverse()                       This static method reverses the contents of a one-dimensional array.
-            Sort()                          This static method sorts a one-dimensional array of intrinsic types. If the
+            Sort()                          This static method sorts a one-dimensional array of intrinsic types (types built into C#). If the
                                             elements in the array implement the IComparer interface, you can also sort your
                                             custom types (see Chapter 9).
              */
@@ -469,7 +486,7 @@ namespace CSharp
         // members of enum type can be accessed as follows : enumType.member ex : WorkingDays.Fri
 
         /*Every enumeration type has an underlying type, which can be any integral type except char. 
-         * The default underlying type of enumeration elements is int. To declare an enum of another integral type, such as byte
+         * The default underlying type of enumeration elements is int.
          The approved types for an enum are byte, sbyte, short, ushort, int, uint, long, or ulong.
          
             An enum var is initialized as : "WeekendDays weekEndDats = WeekendDays.Sun;"

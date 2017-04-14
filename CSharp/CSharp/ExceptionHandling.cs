@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSharp
 {
-    // Oennote : Exception Handling
+    // Onenote : Exception Handling
     class ExceptionHandling
     {
         public static void exceptionHandlingMain()
@@ -139,7 +139,7 @@ namespace CSharp
                 /*
                 Throw the exception caught by the current catch statement.  You’re not creating a new exception object; you’re just
                 rethrowing the original exception object (with all its original information). Doing so preserves the context of
-                the original target. Do this when another exception handler can do handle the current exception in a better manner
+                the original target. Do this when another exception handler can handle the current exception in a better manner
                  */
 
                 throw;      // the exception thrown here will not be caught by the catch statement below. It needs to be 
@@ -168,7 +168,7 @@ namespace CSharp
             catch(ArithmeticException e)
             {
                 // some statements in catch block which itself cause an exception
-                throw new DivideByZeroException("Exception with an inner exception", e);
+                throw new ArithmeticException("Exception with an inner exception", new NullReferenceException());
             }
 
         }
@@ -182,7 +182,7 @@ namespace CSharp
             dispose of objects, close a file, or detach from a database (or whatever), a finally block ensures a location
             for proper cleanup.
              */
-
+            
             try
             {
                 throw new DivideByZeroException();

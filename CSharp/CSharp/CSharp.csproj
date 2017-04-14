@@ -40,6 +40,10 @@
     <StartupObject>CSharp.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Collections.cs" />
+    <Compile Include="Interface\Common Interfaces Implementation\Comparable.cs" />
+    <Compile Include="Interface\Common Interfaces Implementation\Enumerable.cs" />
+    <Compile Include="Interface\Common Interfaces Implementation\Cloneable.cs" />
     <Compile Include="Interface\Point.cs" />
     <Compile Include="Interface\Triangle.cs" />
     <Compile Include="OOP\Car.cs" />
